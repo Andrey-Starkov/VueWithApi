@@ -1,9 +1,11 @@
 <template>
+  <h1 id="label">Поиск Аниме</h1>
     <input type="text" v-model="anime">
-    <button v-on:click="Searchanime"> Hello </button>
+    <button v-on:click="Searchanime"> Поиск </button>
+  <div class="animess">
   <Animes v-for="anime of anime2" :key="anime.id"
   v-bind:anime="anime"/>
-
+  </div>
 
 </template>
 
@@ -80,12 +82,34 @@ export default {
 </script>
 
 <style>
+html{
+  height: 100%;
+  background: #4be061;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+body{
+  margin: 0;
+}
+#label{
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 50px;
+  margin: 20px;
+}
+input{
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+button{
+  font-size: 42px;
+  margin-left: 10px;
+}
+
 </style>
