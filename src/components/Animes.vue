@@ -6,9 +6,9 @@
     <div class="information">
       <h1 id="name">{{anime.title}}</h1>
       <h3 id="description">{{anime.synopsis}}</h3>
-      <h2 id="rate">Рейтинг myanimelist: {{anime.score}}</h2>
-      <h4 id="date">Дата выхода: {{anime.start_date[0]}}{{anime.start_date[1]}}{{anime.start_date[2]}}{{anime.start_date[3]}}</h4>
-      <a :href="anime.url">Ссылка на аниме</a>
+      <h2 id="rate">Rating myanimelist: {{anime.score}}</h2>
+      <h4 id="date">Release date: {{anime.start_date[0]}}{{anime.start_date[1]}}{{anime.start_date[2]}}{{anime.start_date[3]}}</h4>
+      <a :href="anime.url">Link on anime</a>
     </div>
   </div>
 </template>
