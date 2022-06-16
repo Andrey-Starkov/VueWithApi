@@ -36,7 +36,8 @@
       "vue/no-mutating-props": "off",
       "vue/return-in-computed-property": "off",
       "vue/no-side-effects-in-computed-properties": "off",
-      "vue/multi-word-component-names": "off"
+      "vue/multi-word-component-names": "off",
+      "vue/no-parsing-error" : "off"
     }
   },
   "browserslist": [

@@ -1,13 +1,13 @@
 <template>
   <div class="all">
     <div class="icon">
-      <img id="ok" :src="anime.image_url" />
+      <img id="ok" :src="anime.images.jpg.image_url" />
     </div>
     <div class="information">
       <h1 id="name">{{anime.title}}</h1>
-      <h3 id="description">{{anime.synopsis}}</h3>
+      <h3 id="description">{{description}}</h3>
       <h2 id="rate">Rating myanimelist: {{anime.score}}</h2>
-      <h4 id="date">Release date: {{anime.start_date[0]}}{{anime.start_date[1]}}{{anime.start_date[2]}}{{anime.start_date[3]}}</h4>
+      <h4 id="date">{{anime.aired.string}}</h4>
       <a :href="anime.url">Link on anime</a>
     </div>
   </div>
@@ -17,7 +17,14 @@
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Animes",
-  props: ["anime"]
+  props: ["anime"],
+  computed: {
+    description() {
+      if(this.anime.synopsis.length>256)
+        return this.anime.synopsis.slice(0,255) + "..."
+      return this.anime.synopsis
+    }
+  }
 }
 </script>
 
@@ -46,5 +53,4 @@ img{
 #name{
   height: 180px;
 }
-
 </style>
